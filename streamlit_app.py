@@ -40,9 +40,6 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
 
-
-# take the json version of the response and normalize it
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #output it the screen as a table
 streamlit.dataframe(fruityvice_normalized)
 # do not run anything past here while we troubleshoot
