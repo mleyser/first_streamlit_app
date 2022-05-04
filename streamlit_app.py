@@ -44,15 +44,6 @@ try:
 except URLError as e:
   streamlit.error()
 
-# take the json version of the response and normalize it
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-#output it the screen as a table
-streamlit.dataframe(fruityvice_normalized)
-# do not run anything past here while we troubleshoot
-streamlit.stop()
-
-# snowflake connector
-
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
 def get_fruit_load_list():
